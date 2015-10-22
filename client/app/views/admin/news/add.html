@@ -1,0 +1,52 @@
+<div class="container" style="margin-top: 150px; text-align: center;">
+  <h3 style="color: black; margin-bottom: 30px;">Administración Novedades</h3>
+  <form name="todoForm" novalidate>
+    <div class="form-group" style="background: white; border: 1px solid lightgray; margin-top: 5px; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+      <input type="text" class="form-control focus margin" name="name"
+             placeholder="Título" autocomplete="off" required
+             ng-model="news.title">
+      <input type="text" class="form-control focus margin" name="price"
+             placeholder="Descripción" autocomplete="off"
+             ng-model="news.description">
+      <textarea rows="15" class="form-control focus margin" name="name"
+             placeholder="Cuerpo" autocomplete="off"
+             ng-model="news.body"></textarea>
+      <input type="checkbox" class="form-control focus margin" ng-model="news.important"/>
+
+      <input
+        type="file"
+        file-input="files"
+        class="margin"
+        multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+      <a href="http://www.resizeyourimage.com/" target="_blank">
+        Redimensionar imagen
+      </a>
+    </div>
+    <button class="btn btn-default" style="margin-bottom: 10px;" ng-disabled="todoForm.$invalid" ng-click="createNews()">Agregar</button>
+  </form>
+
+  <div class="list-group" style="text-align: left;">
+    <div class="list-group-item" ng-repeat="n in newsList">
+      <a ng-click="editNews(n.id)">
+        <i class="glyphicon glyphicon-edit pull-right margin-left"></i>
+      </a>
+      <i class="glyphicon glyphicon-remove pull-right"
+         ng-click="deleteNews(n.id)">
+      </i>
+      <img src="storage/images/{{ n.image }}" class="left pull-left" style="width: 12%; margin-right: 20px;">
+      <div class="left title" style="font-size: 16px;">
+        <p style="color: black; margin-left: 15px;">
+          <b>Título:</b>{{ n.title }}
+        </p>
+
+        <p style="color: black; margin-left: 15px;">
+          <b>Descripción:</b>{{ n.description }}
+        </p>
+
+      </div>
+      <div class="clear" style="clear: both;"></div>
+    </div>
+  </div>
+</div>

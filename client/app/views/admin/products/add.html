@@ -1,0 +1,66 @@
+<div class="container" style="margin-top: 150px; text-align: center;">
+  <h3 style="color: black; margin-bottom: px;">Administración productos</h3>
+  <form name="todoForm" novalidate>
+    <div class="form-group" style="background: white; border: 1px solid lightgray; margin-top: 5px; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+      <input type="text" class="form-control focus margin" name="name"
+             placeholder="Nombre" autocomplete="off" required
+             ng-model="product.name">
+      <input type="text" class="form-control focus margin" name="price"
+             placeholder="Precio" autocomplete="off"
+             ng-model="product.price">
+      <input type="text" id="category" class="form-control focus margin" name="category" list="categories"
+             placeholder="Seleccione categoría" autocomplete="off" >
+      <datalist id="categories">
+        <option ng-repeat="c in categories" value="{{c.name}}" id="{{c.id}}">
+      </datalist>
+      <input type="text" id="subCategory" class="form-control focus margin" name="subCategory" list="subCategories"
+             placeholder="Seleccione subcategoría" autocomplete="off" >
+      <datalist id="subCategories">
+        <option ng-repeat="sC in subCategories" value="{{sC.name}}" id="{{sC.id}}">
+      </datalist>
+      <input type="text" class="form-control focus margin" name="name"
+             placeholder="Código" autocomplete="off"
+             ng-model="product.codigo">
+      <label for="destacado"></label>
+      <input type="checkbox" class="form-control focus margin" name="destacado"
+             placeholder="Código" autocomplete="off"
+             ng-model="product.destacado">
+      <input
+        type="file"
+        file-input="files"
+        class="margin"
+        multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+      <a href="http://www.resizeyourimage.com/" target="_blank">
+        Redimensionar imagen
+      </a>
+    </div>
+    <button class="btn btn-default" style="margin-bottom: 10px;" ng-disabled="todoForm.$invalid" ng-click="addProduct()">Agregar</button>
+  </form>
+
+  <div class="list-group" style="text-align: left;">
+    <div class="list-group-item" ng-repeat="p in products">
+      <a ng-click="editProduct(p.id)">
+        <i class="glyphicon glyphicon-edit pull-right margin-left"></i>
+      </a>
+      <i class="glyphicon glyphicon-remove pull-right"
+         ng-click="deleteProduct(p.id)">
+      </i>
+      <img src="storage/images/{{ p.image }}" class="left pull-left" style="width: 12%; margin-right: 20px;">
+      <div class="left title" style="font-size: 16px;">
+        <p style="color: black; margin-left: 15px;">
+          <b>Nombre:</b> {{p.name}}
+        </p>
+
+        <p style="color: black; margin-left: 15px;">
+          <b>Precio:</b>{{ p.price }}
+        </p>
+        <p style="color: black; margin-left: 15px;">
+          <b>Destacado:</b> <span ng-show="p.destacado">Sí</span><span ng-show="!p.destacado">No</span>
+        </p>
+      </div>
+      <div class="clear" style="clear: both;"></div>
+    </div>
+  </div>
+</div>

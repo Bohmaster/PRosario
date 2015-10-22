@@ -1,0 +1,66 @@
+<div class="w-section sechea">
+  <div class="w-container">
+    <div class="w-nav navbarprod" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-container">
+        <a class="w-nav-brand brand productos" ui-sref="app.home" ui-sref-opts="{reload: true, autoscroll: true}"><img src="images/logoNavBar.png" width="71">
+        </a>
+        <h3 class="titulologo">Pescadería<br> Rosario</h3>
+        <div class="textnamepage"></div>
+        <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink" ui-sref="app.home" ui-sref="app.products.list({page: 1})" ui-sref-opts="{reload: true, autoscroll: true}">Inicio</a>
+        </nav>
+        <div class="w-nav-button botonmenu">
+          <div class="w-icon-nav-menu iconomenu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divcategorias">
+    <div class="w-container">
+      <div class="div2categorias">
+        <a class="w-inline-block linkcategorias"
+          ng-repeat="c in categories"
+          ng-click="selectCategory(c.id)"
+          ui-sref=".category({categoryId:c.id, page: 1})">
+          <div class="textcategoria">{{ c.name }}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="divsubcategorias">
+    <div class="w-container">
+      <div class="div2subcategorias" ng-if="categorySelected">
+        <a class="w-inline-block linksubcategorias"
+          ng-repeat="sC in currentCategory"
+          ui-sref="app.products.subCategory({subCategoryId: sC.id, page: 1})">
+          <div class="textsubcategoria">{{ sC.name }}</div>
+        </a>
+      </div>
+      <div class="div2subcategorias" ng-if="!categorySelected">
+        <a class="w-inline-block linksubcategorias">
+          <div class="textsubcategoria">General</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="divbuscador">
+    <div class="w-container">
+      <div class="w-form">
+        <form class="w-clearfix formbuscador" id="email-form" name="email-form" data-name="Email Form">
+          <input class="w-input inputbuscador" id="field" ng-model="query" type="text" placeholder="Ingrese su búsqueda" name="field" required="required"><a ui-sref="app.products.search({query: query})"  class="button buscar" href="#">Buscar</a>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="w-section secproductos">
+  <div class="w-container contproductos">
+    <ui-view></ui-view>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<form name="todoForm" novalidate>
+  <div class="form-group" style="background: white; border: 1px solid lightgray; margin-top: 5px; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+    <input type="text" class="form-control focus margin" name="name"
+           placeholder="Título" autocomplete="off" required
+           ng-model="news.title">
+    <input type="text" class="form-control focus margin" name="price"
+           placeholder="Descripción" autocomplete="off"
+           ng-model="news.description">
+      <textarea rows="15" class="form-control focus margin" name="name"
+                placeholder="Cuerpo" autocomplete="off"
+                ng-model="news.body"></textarea>
+    <input type="checkbox" class="form-control focus margin" ng-model="news.important"/>
+
+    <input
+      type="file"
+      file-input="files"
+      class="margin"
+      multiple
+      />
+    <li ng-repeat="file in files">{{file.name}}</li>
+    <a href="http://www.resizeyourimage.com/" target="_blank">
+      Redimensionar imagen
+    </a>
+  </div>
+  <button class="btn btn-default" style="margin-bottom: 10px; margin-left: 10px;" ng-disabled="todoForm.$invalid" ng-click="submitEdition()">Editar</button>
+</form>

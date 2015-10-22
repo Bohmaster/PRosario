@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: 150px; text-align: center;">
+  <h3 style="color: black; margin-bottom: 30px;">Administración Recetas</h3>
+  <form name="todoForm" novalidate>
+    <div class="form-group" style="background: white; border: 1px solid lightgray; margin-top: 5px; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+
+      <input
+        type="file"
+        file-input="files"
+        class="margin"
+        multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+      <a href="http://www.resizeyourimage.com/" target="_blank">
+        Redimensionar imagen
+      </a>
+    </div>
+    <button class="btn btn-default" style="margin-bottom: 10px;" ng-disabled="todoForm.$invalid" ng-click="createRecipe()">Agregar</button>
+  </form>
+
+  <div class="list-group" style="text-align: left;">
+    <div class="list-group-item" ng-repeat="r in recipes">
+
+      <i class="glyphicon glyphicon-remove pull-right"
+         ng-click="removeRecipe(r.id)">
+      </i>
+<center>      <img src="storage/images/{{ r.recipe }}"  style="width: 60%; margin-right: 20px; clear: both;">
+</center>
+
+      </div>
+      <div class="clear" style="clear: both;"></div>
+    </div>
+  </div>
+</div>

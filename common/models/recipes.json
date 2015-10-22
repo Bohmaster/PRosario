@@ -1,0 +1,15 @@
+{
+  "name": "Recipes",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "recipe": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,21 @@
+<div class="w-row" ng-repeat="n in articles" ui-sref="app.news.detail({noticeId: n.id})">
+  <div class="w-col w-col-6 w-clearfix">
+    <img class="imgeventos" src="storage/images/{{n.image}}" width="408">
+  </div>
+  <div class="w-col w-col-6">
+    <h3 class="novedades">{{ n.title }}</h3>
+    <p class="novedad">{{ n.description }}</p>
+  </div>
+</div>
+<div class="w-section secpaginador" style="clear: both">
+  <div class="w-container">
+    <div class="divpaginacion">
+      <div class="botonpaginacion"
+           page="{{p}}"
+           ng-repeat="p in pages"
+           ui-sref="app.news.list({page: p})">
+        {{ p }}
+      </div>
+    </div>
+  </div>
+</div>

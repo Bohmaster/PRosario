@@ -1,0 +1,27 @@
+<h3 style="color: black; text-align: center; margin-top: 25px;"> {{ product.name }}</h3>
+  <form name="todoForm" novalidate>
+    <div class="form-group" style="background: white; padding: 20px;" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+      <input type="text" id="prueba" class="form-control focus margin" name="name"
+             placeholder="Nombre" autocomplete="off"
+             ng-model="product.name">
+      <input type="text" class="form-control focus margin" name="price"
+             placeholder="Precio" autocomplete="off"
+             ng-model="product.price">
+          <input type="checkbox" class="form-control focus margin" name="destacado"
+             placeholder="Código" autocomplete="off"
+             ng-model="product.destacado">
+
+      <input
+        type="file"
+        file-input="files"
+        class="margin"
+        multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+      <a href="http://www.resizeyourimage.com/" target="_blank">
+        Redimensionar imagen
+      </a>
+    </div>
+    <button class="btn btn-default" style="margin-top: -50px; margin-left: 20px;" ng-disabled="todoForm.$invalid" ng-click="submitEdition()">Editar</button>
+  </form>
+

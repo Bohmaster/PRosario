@@ -1,0 +1,24 @@
+{
+  "name": "SubCategory",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,20 @@
+<div class="w-col w-col-3" ng-repeat="p in products">
+  <div class="divprodu"><img class="imgmarco" src="images/marcoProducto2.png">
+    <div class="nombreprod">{{ p.name | capitalize }}</div>
+    <img class="imgprod" src="storage/images/{{ p.image }}">
+    <div class="precioprod">$ {{ p.price }}</div>
+  </div>
+</div>
+
+<div class="w-section secpaginador" style="clear: both">
+  <div class="w-container">
+    <div class="divpaginacion">
+      <div class="botonpaginacion"
+           page="{{p}}"
+           ng-repeat="p in pages"
+           ui-sref="app.products.list({page: p})">
+        {{ p }}
+      </div>
+    </div>
+  </div>
+</div>

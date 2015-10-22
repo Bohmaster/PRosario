@@ -1,0 +1,30 @@
+{
+  "name": "Event",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "important": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

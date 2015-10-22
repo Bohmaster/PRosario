@@ -1,0 +1,65 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Category": 5,
+    "SubCategory": 3,
+    "Product": 28,
+    "Event": 24,
+    "Recipes": 5
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Category": {
+      "1": "{\"name\":\"Mar\",\"description\":\"\",\"id\":1}",
+      "2": "{\"name\":\"Rio\",\"description\":\"\",\"id\":2}",
+      "3": "{\"name\":\"Elaborados\",\"description\":\"\",\"id\":3}",
+      "4": "{\"name\":\"Mariscos\",\"description\":\"\",\"id\":4}"
+    },
+    "SubCategory": {
+      "1": "{\"name\":\"Frio\",\"description\":\"\",\"id\":1,\"categoryId\":1}",
+      "2": "{\"name\":\"Caliente\",\"description\":\"\",\"id\":2,\"categoryId\":1}"
+    },
+    "Product": {
+      "6": "{\"name\":\"Filet de Merlza\",\"price\":\"150/kg\",\"image\":\"images (1).jpg\",\"destacado\":true,\"codigo\":\"asd\",\"categoryId\":1,\"subCategoryId\":1,\"id\":6}",
+      "7": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":7}",
+      "8": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":8}",
+      "9": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":9}",
+      "10": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":10}",
+      "11": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":11}",
+      "12": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":false,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":12}",
+      "13": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":13}",
+      "14": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":14}",
+      "15": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":15}",
+      "16": "{\"name\":\"ada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"adsasdad\",\"price\":\"dadsads\",\"categoryId\":1,\"subCategoryId\":2,\"id\":16}",
+      "17": "{\"name\":\"dsada\",\"image\":\"imgDestacados.jpg\",\"destacado\":true,\"codigo\":\"100\",\"price\":\"dasdadas\",\"categoryId\":1,\"subCategoryId\":2,\"id\":17}",
+      "18": "{\"name\":\"asdadasdasddasda\",\"image\":\"imgDestacados.jpg\",\"id\":18}",
+      "19": "{\"name\":\"asdasdasdasd\",\"image\":\"slide1_1.jpg\",\"destacado\":true,\"codigo\":\"asdasdad\",\"price\":\"asdasdasd\",\"categoryId\":1,\"subCategoryId\":1,\"id\":19}",
+      "20": "{\"name\":\"asdasadasd\",\"image\":\"imgDestacados.jpg\",\"id\":20}",
+      "21": "{\"name\":\"asdasdasdaada\",\"image\":\"imgDestacados.jpg\",\"id\":21}",
+      "22": "{\"name\":\"adasdasdaasda\",\"image\":\"separador_direccion.png\",\"fecha\":\"2015-09-07T06:06:17.031Z\",\"id\":22}",
+      "23": "{\"name\":\"sasdasda\",\"image\":\"imgDestacados.jpg\",\"id\":23,\"price\":\"adsasd\"}",
+      "24": "{\"name\":\"asdasdsasdasd\",\"image\":\"slide7.jpg\",\"id\":24}",
+      "25": "{\"name\":\"fsfsdfsfsdfds\",\"image\":\"slide2_1.jpg\",\"fecha\":\"2015-09-07T06:09:41.266Z\",\"id\":25}",
+      "26": "{\"name\":\"asdadsasds\",\"image\":\"slide2.jpg\",\"price\":\"a\",\"fecha\":\"2015-09-07T06:12:01.241Z\",\"id\":26}",
+      "27": "{\"name\":\"asdasdad\",\"image\":\"patron_ola.png\",\"id\":27,\"destacado\":true}"
+    },
+    "Event": {
+      "13": "{\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"image\":\"notidestaca.jpg\",\"title\":\"Clase de Cocina de pescados\",\"body\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"id\":13,\"important\":true}",
+      "14": "{\"description\":\"asdasdasdasdads\",\"image\":\"o.jpg\",\"title\":\"asda\",\"id\":14}",
+      "22": "{\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"image\":\"55a681c5d93368f70c744b29_o.jpg\",\"title\":\"Cocina para todos\",\"important\":false,\"id\":22}",
+      "23": "{\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.\",\"image\":\"55a6becf12415d60144fc143_o (2).jpg\",\"title\":\"Presentación Chef Ghandi\",\"important\":false,\"id\":23}"
+    },
+    "Recipes": {
+      "3": "{\"recipe\":\"slider3.jpg\",\"id\":3}",
+      "4": "{\"recipe\":\"slide7.jpg\",\"id\":4}"
+    }
+  }
+}

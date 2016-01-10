@@ -12,7 +12,12 @@ var ds = loopback.createDataSource({
   root: path.join(__dirname, 'storage')
 });
 var Container = ds.createModel('container');
+
 app.model(Container);
+
+app.get('/stream', function(req, res){
+	console.log('connected', req);
+});
 
 app.use(loopback.static(path.resolve(__dirname)));
 
